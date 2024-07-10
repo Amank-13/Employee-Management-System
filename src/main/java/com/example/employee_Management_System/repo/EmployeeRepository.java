@@ -22,5 +22,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 	
 	
 	 @Query("UPDATE Employee e SET e.location = :location WHERE e.empId = :empId")
-	    void updateLocation(@Param("location") String location, @Param("empId") Long empId);
+	    String updateLocation(@Param("location") String location, @Param("empId") Long empId);
 }
